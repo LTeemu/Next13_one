@@ -1,90 +1,55 @@
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main>
+      <div className='flex flex-col flex-1 bg-gray-200 md:flex-row'>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
+        <div className='grid w-full py-8 text-center md:text-left md:w-1/2 place-content-center'>
+          <p className='tracking-wider'>
+            <span className='text-2xl font-bold opacity-[0.8]'>Improve</span><br />
+            <span className='text-3xl font-extrabold opacity-[0.9]'>the way</span><br />
+            <span className='text-4xl font-black'>you work</span>
           </p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          <p className='max-w-[15rem] mt-8 text-sm'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+            Sed consequat laoreet lacinia.
           </p>
-        </a>
+
+          <button className='px-2 py-1 mt-12 text-base font-bold tracking-widest bg-[#5caae9] text-white rounded-lg'>
+            Get Started
+          </button>
+
+          <button className='px-2 py-1 mt-4 text-base font-bold tracking-widest border-2 border-black rounded-lg'>
+            Secondary
+          </button>
+        </div>
+
+        <div className='grid w-full grid-cols-5 grid-rows-5 gap-2 py-8 md:w-1/2 max-w-[1000px] mx-auto'>
+          <div className='col-span-2 row-span-3 bg-green-50'>
+            <p>Empty</p>
+          </div>
+
+          <div className='flex col-span-3 row-span-3 bg-red-300 rounded-4xl aspect-square'>
+            <p>3x3</p>
+            <div className='w-[80%] my-auto rounded-full -translate-x-[60%] bg-orange-300 h-[80%]'>
+              xxx
+            </div>
+          </div>
+
+          <div className='flex col-span-2 row-span-2 bg-red-300 rounded-4xl aspect-square'>
+            <p>2x2</p>
+            <div className='w-[80%] my-auto rounded-full translate-x-[60%] bg-orange-300 h-[80%]'>
+              xxx
+            </div>
+          </div>
+
+          <div className='col-span-3 row-span-3 bg-green-50'>
+            <p>Empty</p>
+          </div>
+        </div>
+
       </div>
     </main>
   )
