@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head />
-      <body className={`${comfortaa.variable} font-comfortaa bg-[#ffffff] text-[#000000]`}>
+      <body className={`${comfortaa.variable} font-comfortaa bg-white text-black`}>
         <Header />
         {children}
         <Footer />

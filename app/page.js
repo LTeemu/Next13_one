@@ -1,8 +1,9 @@
 import Image from 'next/image'
+import FAQBox from './components/FAQBox'
 
 export default function Home() {
   return (
-    <main>
+    <main className='overflow-x-hidden'>
 
       {/*Top content*/}
       <div className='flex flex-col flex-1 px-6 mx-auto gap-x-4 md:flex-row'>
@@ -52,16 +53,40 @@ export default function Home() {
           {/*Small bottom grid*/}
           <div className='relative flex col-span-2 row-span-2 text-white bg-secondary rounded-4xl aspect-square'>
             <p className='absolute bottom-0 p-4 font-extrabold'>Lorem<br />Laoreet</p>
-            
+
             {/*Circle img*/}
             <div className='w-[80%] my-auto rounded-full translate-x-[80%] h-[80%] overflow-clip border-4 border-primary border-solid'>
               <Image src={"/stones-1994691_640.jpg"} alt={''} priority fill />
-            </div>             
+            </div>
           </div>
 
           {/*Bottom empty grid*/}
           <div className='col-span-3 row-span-3'></div>
         </div>
+      </div>
+
+      <div className='grid flex-col px-4 place-content-center gap-y-2'>
+        <p className='font-bold'>Frequently Asked Questions</p>
+
+        <FAQBox
+          question="Do hummingbirds hum because they don't know the words? "
+          answer="Picanha tail enim, meatloaf ipsum hamburger cillum eiusmod ut tempor chuck. Adipisicing in in ground round nisi. Ad brisket esse ut porchetta pastrami elit bresaola corned beef ut drumstick. Veniam irure excepteur porchetta."
+        />
+
+        <FAQBox
+          question="If rabbits' feet are so lucky, then what happened to the rabbit?"
+          answer="Chicken ullamco boudin jerky. Veniam sirloin laborum ham hock cow exercitation anim. Meatball boudin shank tongue dolore sunt kevin aliquip. Ullamco fugiat venison culpa leberkas cupim. Drumstick short loin ullamco porchetta beef ribs, brisket burgdoggen in reprehenderit. In ut ribeye cillum sirloin pork chop meatball shankle do nostrud drumstick chicken burgdoggen mollit excepteur. Irure bresaola eu landjaeger capicola."
+        />
+
+        <FAQBox
+          question="How much money you got on you?"
+          answer="Minim pig commodo, incididunt cupidatat tempor deserunt do jerky hamburger. Ball tip alcatra laboris, andouille exercitation veniam culpa duis spare ribs shankle voluptate salami corned beef strip steak doner. Doner tail short ribs elit, pork chop duis in excepteur qui pork venison nulla enim. Officia est dolore exercitation chuck occaecat. Spare ribs pig cupidatat meatloaf nisi mollit cow meatball proident incididunt. Qui magna aute chuck, t-bone tongue pariatur. Chislic tri-tip andouille t-bone turkey pig capicola strip steak do meatball rump dolore id shankle. Alcatra quis tail officia. Frankfurter et minim shank."
+        />
+
+        <FAQBox
+          question="Why do you get on a bus and a train but get into a car? "
+          answer="Kevin turkey strip steak, ipsum labore qui ground round cillum shoulder est aute dolore buffalo in eu. Aliquip velit occaecat, bacon pork loin excepteur chuck tri-tip ea cow. Sunt labore sirloin in, tongue tempor cillum brisket sed turducken alcatra. Laborum aliqua deserunt, burgdoggen ball tip dolore aliquip minim chicken picanha prosciutto. Doner meatball dolore, kielbasa salami irure venison sint prosciutto strip steak. Sint kevin adipisicing laboris commodo nisi."
+        />
       </div>
     </main>
   )
