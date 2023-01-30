@@ -3,8 +3,11 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main>
-      <div className='flex flex-col flex-1 bg-gray-200 md:flex-row'>
 
+      {/*Top content*/}
+      <div className='flex flex-col flex-1 px-6 mx-auto gap-x-4 md:flex-row'>
+
+        {/*Text and buttons*/}
         <div className='grid w-full py-8 text-center md:text-left md:w-1/2 place-content-center'>
           <p className='tracking-wider'>
             <span className='text-2xl font-bold opacity-[0.8]'>Improve</span><br />
@@ -17,39 +20,48 @@ export default function Home() {
             Sed consequat laoreet lacinia.
           </p>
 
-          <button className='px-2 py-1 mt-12 text-base font-bold tracking-widest bg-[#5caae9] text-white rounded-lg'>
-            Get Started
-          </button>
+          <div className='flex mt-12 md:flex-col md:gap-y-4 gap-x-4'>
+            <button className='px-3 py-2 font-bold tracking-wider text-white border-4 rounded-md bg-primary w-min md:w-full whitespace-nowrap buttonHover'>
+              Get Started
+            </button>
 
-          <button className='px-2 py-1 mt-4 text-base font-bold tracking-widest border-2 border-black rounded-lg'>
-            Secondary
-          </button>
-        </div>
-
-        <div className='grid w-full grid-cols-5 grid-rows-5 gap-2 py-8 md:w-1/2 max-w-[1000px] mx-auto'>
-          <div className='col-span-2 row-span-3 bg-green-50'>
-            <p>Empty</p>
+            <button className='px-3 py-2 font-bold tracking-wider border-4 rounded-md border-secondary text-secondary w-min md:w-full whitespace-nowrap backdrop-brightness-95 buttonHover'>
+              Secondary
+            </button>
           </div>
 
-          <div className='flex col-span-3 row-span-3 bg-red-300 rounded-4xl aspect-square'>
-            <p>3x3</p>
-            <div className='w-[80%] my-auto rounded-full -translate-x-[60%] bg-orange-300 h-[80%]'>
-              xxx
+        </div>
+
+        {/*Grids*/}
+        <div className='grid relative w-full max-w-[1000px] grid-cols-5 grid-rows-5 gap-2 pt-8 mx-auto md:w-1/2 mb-8 afterBorder'>
+          {/*Dashed border*/}
+          <div className='absolute grid w-3/4 border-4 border-dashed border-b-primary border-r-primary border-t-secondary border-l-secondary rounded-4xl place-self-center h-1/2'></div>
+
+          {/*Top empty grid*/}
+          <div className='col-span-2 row-span-3 '></div>
+
+          {/*Big bottom grid*/}
+          <div className='relative flex col-span-3 row-span-3 bg-primary rounded-4xl aspect-square'>
+            <p className='absolute right-0 p-4 font-extrabold text-right text-white'>Next13<br />Practice</p>
+            {/*Circle img*/}
+            <div className='w-[80%] my-auto rounded-full -translate-x-[40%] h-[80%] overflow-clip border-4 border-secondary border-solid'>
+              <Image src={"/water-5245722_640.jpg"} alt={''} priority fill />
             </div>
           </div>
 
-          <div className='flex col-span-2 row-span-2 bg-red-300 rounded-4xl aspect-square'>
-            <p>2x2</p>
-            <div className='w-[80%] my-auto rounded-full translate-x-[60%] bg-orange-300 h-[80%]'>
-              xxx
-            </div>
+          {/*Small bottom grid*/}
+          <div className='relative flex col-span-2 row-span-2 text-white bg-secondary rounded-4xl aspect-square'>
+            <p className='absolute bottom-0 p-4 font-extrabold'>Lorem<br />Laoreet</p>
+            
+            {/*Circle img*/}
+            <div className='w-[80%] my-auto rounded-full translate-x-[80%] h-[80%] overflow-clip border-4 border-primary border-solid'>
+              <Image src={"/stones-1994691_640.jpg"} alt={''} priority fill />
+            </div>             
           </div>
 
-          <div className='col-span-3 row-span-3 bg-green-50'>
-            <p>Empty</p>
-          </div>
+          {/*Bottom empty grid*/}
+          <div className='col-span-3 row-span-3'></div>
         </div>
-
       </div>
     </main>
   )

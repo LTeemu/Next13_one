@@ -6,3 +6,13 @@
   font-size: 1rem;
   font-size: clamp(1rem, 0.84rem + 0.8vw, 1.8rem);
 }
+
+@layer components {
+  .afterBorder {
+    @apply after:border-l-4 after:rounded-bl-full after:border-[#A488A6] after:border-dashed after:border-b-4 after:h-10 pb-8 after:absolute after:w-full after:bottom-0 after:translate-x-[20%]
+  }
+
+  .buttonHover {
+    @apply shadow-[4px_4px_0_0_rgba(192,192,192,0.8)] hover:shadow-[0px_0px_0_0_rgba(192,192,192,1)] hover:invert-[0.05] duration-200 ease-in-out transition-all hover:translate-x-[4px] hover:translate-y-[4px]
+  }
+}

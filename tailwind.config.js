@@ -13,6 +13,10 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+      },
+      colors: {
+        primary: '#d1677c',
+        secondary: '#77a8cf'
       }
     },
   },
