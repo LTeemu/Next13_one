@@ -13,6 +13,6 @@
   }
 
   .buttonHover {
-    @apply shadow-[4px_4px_0_0_rgba(192,192,192,0.8)] hover:shadow-[0px_0px_0_0_rgba(192,192,192,1)] hover:invert-[0.05] duration-200 ease-in-out transition-all hover:translate-x-[4px] hover:translate-y-[4px]
+    @apply shadow-[4px_4px_0_0_rgba(192,192,192,0.9)] hover:shadow-[0px_0px_0_0_rgba(192,192,192,0.9)] duration-150 ease-in transition-all hover:translate-x-[4px] hover:translate-y-[4px]
   }
 }

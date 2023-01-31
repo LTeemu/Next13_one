@@ -11,23 +11,22 @@ export default function Home() {
         {/*Text and buttons*/}
         <div className='grid w-full py-8 text-center md:text-left md:w-1/2 place-content-center'>
           <p className='text-4xl font-light tracking-wider'>
-            <span>Improve</span><br />
-            <span>the way</span><br />
-            <span>you work</span>
+            <span>Kicked a llama</span><br />
+            <span>while riding</span><br />
           </p>
 
-          <p className='max-w-[15rem] mt-8'>
+          <p className='max-w-[15rem] mt-8 text-slate-700 font-light'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
             Sed consequat laoreet lacinia.
           </p>
 
           <div className='flex mt-12 md:flex-col md:gap-y-4 gap-x-4'>
             <button className='px-3 py-2 font-bold tracking-wider text-white border-4 rounded-md bg-primary w-min md:w-full whitespace-nowrap buttonHover'>
-              Get Started
+              GET STARTED
             </button>
 
-            <button className='px-3 py-2 font-bold tracking-wider border-4 rounded-md border-secondary text-secondary w-min md:w-full whitespace-nowrap backdrop-brightness-95 buttonHover'>
-              Secondary
+            <button className='px-3 py-2 font-bold tracking-wider bg-white border-4 rounded-md border-secondary text-secondary w-min md:w-full whitespace-nowrap buttonHover'>
+              SECONDARY
             </button>
           </div>
 
@@ -43,20 +42,20 @@ export default function Home() {
 
           {/*Big bottom grid*/}
           <div className='relative flex col-span-3 row-span-3 bg-primary rounded-4xl aspect-square'>
-            <p className='absolute right-0 p-4 font-extrabold text-right text-white'>Next13<br />Practice</p>
+            <p className='absolute right-0 p-4 font-semibold tracking-wider text-right text-white'>Next13<br />Practice</p>
             {/*Circle img*/}
-            <div className='w-[80%] my-auto rounded-full -translate-x-[40%] h-[80%] overflow-clip border-4 border-secondary border-solid'>
-              <Image src={"/water-5245722_640.jpg"} alt={''} priority fill />
+            <div className='w-[80%] relative my-auto rounded-full -translate-x-[40%] h-[80%] overflow-clip border-4 border-secondary border-solid'>
+              <Image src={"/llama.webp"} sizes='50vw' alt={''} priority fill className='object-cover object-[25%]' />
             </div>
           </div>
 
           {/*Small bottom grid*/}
           <div className='relative flex col-span-2 row-span-2 text-white bg-secondary rounded-4xl aspect-square'>
-            <p className='absolute bottom-0 p-4 font-extrabold'>Lorem<br />Laoreet</p>
+            <p className='absolute bottom-0 p-4 font-semibold tracking-wider'>Lorem<br />Laoreet</p>
 
             {/*Circle img*/}
-            <div className='w-[80%] my-auto rounded-full translate-x-[80%] h-[80%] overflow-clip border-4 border-primary border-solid'>
-              <Image src={"/stones-1994691_640.jpg"} alt={''} priority fill />
+            <div className='w-[80%] relative my-auto rounded-full translate-x-[80%] h-[80%] overflow-clip border-4 border-primary border-solid'>
+              <Image src={"/boot.webp"} sizes='25vw' alt={''} priority fill className='object-cover object-[60%_50%]' />
             </div>
           </div>
 
@@ -66,7 +65,7 @@ export default function Home() {
       </div>
 
       <div className='grid flex-col px-4 place-content-center gap-y-2'>
-        <p className='font-bold'>Frequently Asked Questions</p>
+        <p className='font-semibold tracking-wider'>Frequently Asked Questions</p>
 
         <FAQBox
           question="Do hummingbirds hum because they don't know the words? "

@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        comfortaa: ['var(--font-comfortaa)'],
-        exo2: ['var(--font-exo2)'],
+        assistant: ['var(--font-assistant)'],
+        tourney: ['var(--font-tourney)'],
       },
       borderRadius: {
         '4xl': '2rem',
@@ -17,7 +17,7 @@ module.exports = {
       colors: {
         primary: '#d1677c',
         secondary: '#77a8cf'
-      }
+      },
     },
   },
   plugins: [],

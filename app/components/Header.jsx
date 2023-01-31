@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from 'public/eyeball-svgrepo-com.svg'
+import { BiMenuAltRight } from 'react-icons/bi'
 
 export default function Header() {
   return (
     <header className='flex items-center justify-between px-8 py-4'>
       <Link href='#' className='flex items-center'>
-        <div className='relative h-[1.6rem] aspect-square'>
+        <div className='relative h-[2.2rem] aspect-square'>
           <Image src={Logo} alt={''} priority fill />
         </div>
-        <p className='ml-3 text-xl font-black'>Logo</p>
+        <p className='ml-3 text-2xl tracking-wider text-[#2b3a80] font-normal font-nabla'>Logo</p>
       </Link>
 
       <nav className='hidden text-sm md:flex gap-x-5'>
@@ -20,7 +21,9 @@ export default function Header() {
         <Link href='#'>FAQ</Link>
       </nav>
 
-      <button className='md:hidden'>Menu</button>
+      <button className='md:hidden'>
+        <BiMenuAltRight style={{fontSize: '2.2rem'}}/>
+      </button>
     </header>
   )
 }
