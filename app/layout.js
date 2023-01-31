@@ -1,5 +1,5 @@
 import './globals.css'
-import { Assistant, Nabla, Tourney } from '@next/font/google'
+import { Assistant, Tourney } from '@next/font/google'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
