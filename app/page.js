@@ -3,20 +3,20 @@ import FAQBox from './components/FAQBox'
 
 export default function Home() {
   return (
-    <main className='overflow-x-hidden'>
+    <main className='overflow-x-hidden' tabIndex={-1}>
 
       {/*Top content*/}
       <div className='flex flex-col flex-1 px-6 mx-auto gap-x-4 md:flex-row'>
 
         {/*Text and buttons*/}
         <div className='grid w-full py-8 text-center md:text-left md:w-1/2 place-content-center'>
-          <p className='tracking-wider'>
-            <span className='text-2xl font-bold opacity-[0.8]'>Improve</span><br />
-            <span className='text-3xl font-extrabold opacity-[0.9]'>the way</span><br />
-            <span className='text-4xl font-black'>you work</span>
+          <p className='text-4xl font-light tracking-wider'>
+            <span>Improve</span><br />
+            <span>the way</span><br />
+            <span>you work</span>
           </p>
 
-          <p className='max-w-[15rem] mt-8 text-sm'>
+          <p className='max-w-[15rem] mt-8'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
             Sed consequat laoreet lacinia.
           </p>
