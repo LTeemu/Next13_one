@@ -38,9 +38,9 @@ export default function Home() {
           <div className='absolute grid w-3/4 border-4 border-dashed border-b-primary border-r-primary border-t-secondary border-l-secondary rounded-4xl place-self-center h-1/2'></div>
 
           {/*Top empty grid*/}
-          <div className='col-span-2 row-span-3 '></div>
+          <div className='col-span-2 row-span-3'></div>
 
-          {/*Big bottom grid*/}
+          {/*Big top grid*/}
           <div className='relative flex col-span-3 row-span-3 bg-primary rounded-4xl aspect-square'>
             <p className='absolute right-0 p-4 font-semibold tracking-wider text-right text-white'>Next13<br />Practice</p>
             {/*Circle img*/}
@@ -52,7 +52,6 @@ export default function Home() {
           {/*Small bottom grid*/}
           <div className='relative flex col-span-2 row-span-2 text-white bg-secondary rounded-4xl aspect-square'>
             <p className='absolute bottom-0 p-4 font-semibold tracking-wider'>Lorem<br />Laoreet</p>
-
             {/*Circle img*/}
             <div className='w-[80%] relative my-auto rounded-full translate-x-[80%] h-[80%] overflow-clip border-4 border-primary border-solid'>
               <Image src={"/boot.webp"} sizes='25vw' alt={''} priority fill className='object-cover object-[60%_50%]' />

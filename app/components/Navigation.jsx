@@ -46,7 +46,7 @@ export default function Navigation() {
 
           {/*Link container*/}
           <div
-            className={`fixed top-0 gap-y-4 py-4 flex flex-col overflow-x-hidden left-0 z-20 w-[70vw] h-screen bg-slate-200 linear transition-all duration-500 ${
+            className={`fixed top-0 gap-y-4 py-4 flex flex-col overflow-x-hidden left-0 z-20 w-[70vw] h-screen bg-white linear transition-all duration-500 ${
               open ? 'max-w-3xl' : 'max-w-0'
             }`}
           >
@@ -56,7 +56,7 @@ export default function Navigation() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={`w-[90%] p-1 mx-auto font-bold tracking-wider border-slate-300 text-white border-4 rounded-md whitespace-nowrap buttonHover ${
+                  className={`w-[90%] p-1 mx-auto font-bold tracking-wider text-white border-4 rounded-md whitespace-nowrap buttonHover ${
                     i % 2 ? 'bg-secondary' : 'bg-primary'
                   }`}
                 >
