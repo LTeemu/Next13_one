@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import FAQBox from './components/FAQBox'
+import { Button, tempClick } from './components/Button'
 
 export default function Home() {
   return (
@@ -21,15 +22,9 @@ export default function Home() {
           </p>
 
           <div className='flex mt-12 md:flex-col md:gap-y-4 gap-x-4'>
-            <button className='px-3 py-2 font-bold tracking-wider text-white border-4 rounded-md bg-primary w-min md:w-full whitespace-nowrap buttonHover'>
-              GET STARTED
-            </button>
-
-            <button className='px-3 py-2 font-bold tracking-wider bg-white border-4 rounded-md border-secondary text-secondary w-min md:w-full whitespace-nowrap buttonHover'>
-              SECONDARY
-            </button>
+            <Button text='GET STARTED' clickFunc={tempClick} classes='bg-primary text-white px-3 py-2'/>
+            <Button text='SECONDARY' clickFunc={tempClick} classes='border-secondary text-secondary px-3 py-2' />
           </div>
-
         </div>
 
         {/*Grids*/}

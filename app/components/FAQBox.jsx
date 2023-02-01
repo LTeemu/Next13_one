@@ -1,8 +1,8 @@
 'use client'
-import { useState } from "react"
+import { useState } from 'react'
 import { FaChevronDown } from 'react-icons/fa'
 
-export default function FAQBox({question, answer}) {
+export default function FAQBox({ question, answer }) {
   const [open, setOpen] = useState(false)
 
   return (
