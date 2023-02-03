@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link'
 import { BiMenuAltRight } from 'react-icons/bi'
 import { useState } from 'react'
 import ButtonLink from './ButtonLink'
@@ -7,11 +6,11 @@ import ButtonLink from './ButtonLink'
 export default function Navigation() {
   const [open, setOpen] = useState(false)
   const links = [
-    { name: 'Home', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Pricing', href: '#' },
-    { name: 'Feedback', href: '#' },
-    { name: 'FAQ', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'Features', href: '/features' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   function openMenu() {
@@ -29,7 +28,15 @@ export default function Navigation() {
       {/*Desktop - Over 768px md:*/}
       <nav className='hidden text-sm md:flex gap-x-4'>
         {links.map((link) => {
-          return <ButtonLink key={link.name} href={link.href} clickFunc={closeMenu} text={link.name} classes={`w-[90%] px-1 py-0.5 mx-auto text-[#2b2a33]`} />
+          return (
+            <ButtonLink
+              key={link.name}
+              href={link.href}
+              clickFunc={closeMenu}
+              content={link.name}
+              classContainer={`w-[90%] px-1 py-0.5 mx-auto text-[#2b2a33]`}
+            />
+          )
         })}
       </nav>
 
@@ -57,7 +64,16 @@ export default function Navigation() {
             }`}
           >
             {links.map((link, i) => {
-              return <ButtonLink key={link.name} href={link.href} clickFunc={closeMenu} text={link.name} classes={`w-[90%] p-1 mx-auto text-white ${i % 2 ? 'bg-secondary' : 'bg-primary'}`} />
+              return (
+                <ButtonLink
+                  key={link.name}
+                  href={link.href}
+                  clickFunc={closeMenu}
+                  content={link.name}
+                  classContainer={`w-[90%] p-1 mx-auto text-white ${i % 2 ? 'bg-secondary' : 'bg-primary'}`}
+                  classContent='ml-1'
+                />
+              )
             })}
           </div>
         </div>

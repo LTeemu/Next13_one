@@ -1,10 +1,15 @@
 'use client'
 import Link from 'next/link'
 
-export default function ButtonLink({ text, href, clickFunc, classes }) {
+export default function ButtonLink({ content, href, clickFunc, classContainer, classContent, blank }) {
   return (
-    <Link href={href} onClick={clickFunc} className={`font-bold tracking-wider border-4 rounded-md whitespace-nowrap buttonHover ${classes}`}>
-      <p className='mx-1'>{text}</p>
+    <Link
+      href={href}
+      onClick={clickFunc && clickFunc}
+      target={blank ? '_blank' : '_self'}
+      className={`font-bold tracking-wider border-4 whitespace-nowrap buttonHover ${classContainer}`}
+    >
+      <span className={classContent}>{content}</span>
     </Link>
   )
 }

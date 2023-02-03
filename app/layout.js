@@ -10,9 +10,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head />
-      <body className={`${assistant.variable} ${tourney.variable} font-assistant bg-white text-black`}>
+      <body className={`${assistant.variable} ${tourney.variable} font-assistant bg-white text-black flex flex-col min-h-screen`}>
         <Header />
-        {children}
+        <main className='flex flex-col flex-1 overflow-x-hidden' tabIndex={-1}>
+          <div>{children}</div>
+        </main>
         <Footer />
       </body>
     </html>

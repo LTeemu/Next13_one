@@ -4,8 +4,7 @@ import { Button, tempClick } from './components/Button'
 
 export default function Home() {
   return (
-    <main className='overflow-x-hidden' tabIndex={-1}>
-
+    <>
       {/*Top content*/}
       <div className='flex flex-col flex-1 px-6 mx-auto gap-x-4 md:flex-row'>
 
@@ -22,20 +21,20 @@ export default function Home() {
           </p>
 
           <div className='flex mt-12 md:flex-col md:gap-y-4 gap-x-4'>
-            <Button text='GET STARTED' clickFunc={tempClick} classes='bg-primary text-white px-3 py-2'/>
-            <Button text='SECONDARY' clickFunc={tempClick} classes='border-secondary text-secondary px-3 py-2' />
+            <Button text='GET STARTED' clickFunc={tempClick} classes='bg-primary text-white px-3 py-2 rounded-md'/>
+            <Button text='SECONDARY' clickFunc={tempClick} classes='border-secondary text-secondary px-3 py-2 rounded-md' />
           </div>
         </div>
 
         {/*Grids*/}
         <div className='grid relative w-full max-w-[1000px] grid-cols-5 grid-rows-5 gap-2 pt-8 mx-auto md:w-1/2 mb-8 afterBorder'>
-          {/*Dashed border*/}
+          {/*Dashed border in middle*/}
           <div className='absolute grid w-3/4 border-4 border-dashed border-b-primary border-r-primary border-t-secondary border-l-secondary rounded-4xl place-self-center h-1/2'></div>
 
-          {/*Top empty grid*/}
+          {/*TopL empty grid*/}
           <div className='col-span-2 row-span-3'></div>
 
-          {/*Big top grid*/}
+          {/*TopR big grid*/}
           <div className='relative flex col-span-3 row-span-3 bg-primary rounded-4xl aspect-square'>
             <p className='absolute right-0 p-4 font-semibold tracking-wider text-right text-white'>Next13<br />Practice</p>
             {/*Circle img*/}
@@ -44,7 +43,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/*Small bottom grid*/}
+          {/*BottomL small grid*/}
           <div className='relative flex col-span-2 row-span-2 text-white bg-secondary rounded-4xl aspect-square'>
             <p className='absolute bottom-0 p-4 font-semibold tracking-wider'>Lorem<br />Laoreet</p>
             {/*Circle img*/}
@@ -53,11 +52,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/*Bottom empty grid*/}
+          {/*BottomR empty grid*/}
           <div className='col-span-3 row-span-3'></div>
         </div>
       </div>
 
+      {/*FAQ*/}
       <div className='grid flex-col px-4 place-content-center gap-y-2'>
         <p className='font-semibold tracking-wider'>Frequently Asked Questions</p>
 
@@ -81,6 +81,6 @@ export default function Home() {
           answer="Kevin turkey strip steak, ipsum labore qui ground round cillum shoulder est aute dolore buffalo in eu. Aliquip velit occaecat, bacon pork loin excepteur chuck tri-tip ea cow. Sunt labore sirloin in, tongue tempor cillum brisket sed turducken alcatra. Laborum aliqua deserunt, burgdoggen ball tip dolore aliquip minim chicken picanha prosciutto. Doner meatball dolore, kielbasa salami irure venison sint prosciutto strip steak. Sint kevin adipisicing laboris commodo nisi."
         />
       </div>
-    </main>
+    </>
   )
 }
