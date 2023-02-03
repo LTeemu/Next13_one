@@ -63,22 +63,22 @@ export default function Home() {
 
         <FAQBox
           question="Do hummingbirds hum because they don't know the words? "
-          answer="Picanha tail enim, meatloaf ipsum hamburger cillum eiusmod ut tempor chuck. Adipisicing in in ground round nisi. Ad brisket esse ut porchetta pastrami elit bresaola corned beef ut drumstick. Veniam irure excepteur porchetta."
+          answer="No, hummingbirds hum because of the rapid movement of their wings, not because they don't know the words. The humming sound is produced by the rapid vibration of the birds' wing muscles, which moves their wings back and forth rapidly, causing the characteristic humming sound that is often associated with these birds."
         />
 
         <FAQBox
           question="If rabbits' feet are so lucky, then what happened to the rabbit?"
-          answer="Chicken ullamco boudin jerky. Veniam sirloin laborum ham hock cow exercitation anim. Meatball boudin shank tongue dolore sunt kevin aliquip. Ullamco fugiat venison culpa leberkas cupim. Drumstick short loin ullamco porchetta beef ribs, brisket burgdoggen in reprehenderit. In ut ribeye cillum sirloin pork chop meatball shankle do nostrud drumstick chicken burgdoggen mollit excepteur. Irure bresaola eu landjaeger capicola."
+          answer="Rabbits' feet being considered 'lucky' is a cultural superstition and does not have any scientific basis. The fate of a rabbit can vary depending on various factors such as predators, disease, or hunting. Just like any other animal, rabbits are not immune to danger and can fall prey to various threats in their environment."
         />
 
         <FAQBox
           question="How much money you got on you?"
-          answer="Minim pig commodo, incididunt cupidatat tempor deserunt do jerky hamburger. Ball tip alcatra laboris, andouille exercitation veniam culpa duis spare ribs shankle voluptate salami corned beef strip steak doner. Doner tail short ribs elit, pork chop duis in excepteur qui pork venison nulla enim. Officia est dolore exercitation chuck occaecat. Spare ribs pig cupidatat meatloaf nisi mollit cow meatball proident incididunt. Qui magna aute chuck, t-bone tongue pariatur. Chislic tri-tip andouille t-bone turkey pig capicola strip steak do meatball rump dolore id shankle. Alcatra quis tail officia. Frankfurter et minim shank."
+          answer="As an AI language model, I do not have a physical form or the capability to carry money. I exist purely in a digital form and don't have the ability to own or handle physical objects."
         />
 
         <FAQBox
           question="Why do you get on a bus and a train but get into a car? "
-          answer="Kevin turkey strip steak, ipsum labore qui ground round cillum shoulder est aute dolore buffalo in eu. Aliquip velit occaecat, bacon pork loin excepteur chuck tri-tip ea cow. Sunt labore sirloin in, tongue tempor cillum brisket sed turducken alcatra. Laborum aliqua deserunt, burgdoggen ball tip dolore aliquip minim chicken picanha prosciutto. Doner meatball dolore, kielbasa salami irure venison sint prosciutto strip steak. Sint kevin adipisicing laboris commodo nisi."
+          answer="The terminology for entering various modes of transportation reflects the historical and cultural background of the English language. 'Getting on' a bus or train is likely a reference to the act of climbing aboard, which is what one typically does when boarding these modes of transportation. 'Getting into' a car, on the other hand, likely refers to the act of entering and occupying the interior of the vehicle, which is a more common experience when traveling in a car. These phrases have become standardized through common usage and are now widely recognized and accepted as the standard way of referring to the act of entering different modes of transportation."
         />
       </div>
     </>
