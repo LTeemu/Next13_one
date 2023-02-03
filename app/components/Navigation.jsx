@@ -34,7 +34,7 @@ export default function Navigation() {
               href={link.href}
               clickFunc={closeMenu}
               content={link.name}
-              classContainer={`w-[90%] px-1 py-0.5 mx-auto text-[#2b2a33]`}
+              classContainer={`w-[90%] rounded-md px-2 py-0.5 mx-auto text-[#2b2a33]`}
             />
           )
         })}
@@ -52,7 +52,7 @@ export default function Navigation() {
           {/*Dark background*/}
           <div
             onClick={closeMenu}
-            className={`fixed top-0 left-0 z-10 w-screen h-screen bg-[rgba(0,0,0,0.5)] transition-opacity duration-500 ease-in-out ${
+            className={`fixed top-0 left-0 cursor-pointer z-10 w-screen h-screen bg-[rgba(0,0,0,0.5)] transition-opacity duration-500 ease-in-out ${
               open ? 'opacity-1 backdrop-blur-sm' : 'opacity-0 pointer-events-none'
             }`}
           ></div>
@@ -70,8 +70,7 @@ export default function Navigation() {
                   href={link.href}
                   clickFunc={closeMenu}
                   content={link.name}
-                  classContainer={`w-[90%] p-1 mx-auto text-white ${i % 2 ? 'bg-secondary' : 'bg-primary'}`}
-                  classContent='ml-1'
+                  classContainer={`w-[90%] py-1 px-2 rounded-md mx-auto text-white ${i % 2 ? 'bg-secondary' : 'bg-primary'}`}
                 />
               )
             })}
