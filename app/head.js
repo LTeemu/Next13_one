@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 export default function Head() {
   const pathName = usePathname()
   const TITLE = pathName === '/' ? 'NextOne' : 'NextOne - ' + (pathName.charAt(1).toUpperCase() + pathName.slice(2))
-  
+
   return (
     <>
       <title>{TITLE}</title>

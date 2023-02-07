@@ -2,16 +2,34 @@
 import { Button } from './Button'
 import { IoMdRocket } from 'react-icons/io'
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+var _ = require('lodash')
 
 export default function ScrollTop({ classes }) {
-  const [scrollY, setScrollY] = useState(0)
+  const [scrollVisible, setScrollVisible] = useState(false)
+  const pathName = usePathname()
+
+  const trackWindowHeight = () => {
+    setScrollVisible(document.body.scrollHeight > window.innerHeight * 1.1)
+  }
 
   useEffect(() => {
-    window.addEventListener('scroll', () => setScrollY(window.scrollY))
+    window.addEventListener('scroll', _.throttle(trackWindowHeight, 500))
     return () => {
-      window.removeEventListener('scroll', () => setScrollY(window.scrollY))
+      window.removeEventListener('scroll', _.throttle(trackWindowHeight, 500))
     }
   }, [])
 
-  return <Button disabled={scrollY === 0} text={<IoMdRocket style={{ fontSize: '1.4rem' }} />} clickFunc={() => window.scrollTo({ top: 0, behavior: 'smooth' })} classes={`w-min ${classes}`} />
+  useEffect(() => {
+    trackWindowHeight()
+  }, [pathName])
+
+  return (
+    <Button
+      disabled={!scrollVisible}
+      content={<IoMdRocket color='#1e293b' style={{ fontSize: '1.6rem' }} />}
+      clickFunc={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      classes={`w-min disabled:pointer-event-none duration-300 opacity-1 disabled:opacity-0 transition-opacity ${classes}`}
+    />
+  )
 }

@@ -1,7 +1,8 @@
 'use client'
-import { BiMenuAltRight } from 'react-icons/bi'
+import { TfiMenu } from 'react-icons/tfi'
 import { useState } from 'react'
 import ButtonLink from './ButtonLink'
+import { Button } from './Button'
 
 export default function Navigation() {
   const [open, setOpen] = useState(false)
@@ -43,9 +44,7 @@ export default function Navigation() {
       {/*Mobile - Under 768px md:*/}
       <div className='block md:hidden'>
         {/*Hamburger button*/}
-        <button onClick={openMenu}>
-          <BiMenuAltRight color='#2b2a33' style={{ fontSize: '2.2rem' }} />
-        </button>
+        <Button content={<TfiMenu color='#2b2a33' style={{ fontSize: '1.8rem' }} />} clickFunc={openMenu} classes='text-white p-1 rounded-md' />
 
         {/*Hamburger Menu*/}
         <div>

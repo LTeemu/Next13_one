@@ -19,8 +19,8 @@ export default function Home() {
           </p>
 
           <div className='flex mt-10 md:flex-col md:gap-y-4 gap-x-4'>
-            <Button text='GET STARTED' clickFunc={tempClick} classes='bg-primary text-white px-3 py-2 rounded-md' />
-            <Button text='SECONDARY' clickFunc={tempClick} classes='border-secondary text-secondary px-3 py-2 rounded-md' />
+            <Button content='GET STARTED' clickFunc={tempClick} classes='bg-primary text-white px-3 py-2 rounded-md' />
+            <Button content='SECONDARY' clickFunc={tempClick} classes='border-secondary text-secondary px-3 py-2 rounded-md' />
           </div>
         </div>
 
