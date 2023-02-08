@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.84rem + 0.8vw, 1.8rem);
+}
+
+@layer components {
+  .button {
+    @apply font-bold tracking-wider border-4 whitespace-nowrap shadow-[4px_4px_0_0_rgba(192,192,192,0.9)] duration-200 active:duration-[20ms] ease-linear transition-all active:shadow-[0px_0px_0_0_rgba(192,192,192,0)] active:translate-x-[4px] active:translate-y-[4px];
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.dashBorderAnim {
+  &:after {
+    content: '';
+    background-color: white;
+    position: absolute;
+    border-radius: 1.8rem;
+    inset: 0.2rem;
+  }
+  &:before {
+    content: '';
+    background: repeating-conic-gradient(rgba(0, 0, 0, 0) 0deg 9deg, #de657e 9deg 18deg, rgba(0, 0, 0, 0) 18deg 27deg, #73a9d8 27deg 36deg);
+    animation: rotate 30s linear infinite;
+    border-radius: 2rem;
+    height: 200%;
+    position: absolute;
+    width: 200%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }
+}

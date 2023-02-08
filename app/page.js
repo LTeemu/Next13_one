@@ -25,9 +25,9 @@ export default function Home() {
         </div>
 
         {/*Grids*/}
-        <div className='grid relative w-full max-w-[1000px] grid-cols-5 grid-rows-5 gap-2 pt-8 mx-auto md:w-1/2 mb-8 afterBorder'>
+        <div className='grid relative w-full max-w-[1000px] grid-cols-5 grid-rows-5 gap-2 mx-auto md:w-1/2 py-10'>
           {/*Dashed border in middle*/}
-          <div className='absolute grid w-3/4 border-4 border-dashed border-b-primary border-r-primary border-t-secondary border-l-secondary rounded-4xl place-self-center h-1/2'></div>
+          <div className='absolute grid w-3/4 overflow-hidden translate-y-[3%] dashBorderAnim rounded-4xl place-self-center h-1/2'></div>
 
           {/*TopL empty grid*/}
           <div className='col-span-2 row-span-3'></div>
