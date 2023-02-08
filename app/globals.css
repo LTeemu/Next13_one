@@ -13,6 +13,6 @@
   }
 
   .button {
-    @apply font-bold tracking-wider border-4 whitespace-nowrap shadow-[4px_4px_0_0_rgba(192,192,192,0.9)] duration-200 active:duration-75 ease-linear transition-all active:shadow-[0px_0px_0_0_rgba(192,192,192,0.9)] active:translate-x-[4px] active:translate-y-[4px];
+    @apply font-bold tracking-wider border-4 whitespace-nowrap shadow-[4px_4px_0_0_rgba(192,192,192,0.9)] duration-200 active:duration-[20ms] ease-linear transition-all active:shadow-[0px_0px_0_0_rgba(192,192,192,0.9)] active:translate-x-[4px] active:translate-y-[4px];
   }
 }

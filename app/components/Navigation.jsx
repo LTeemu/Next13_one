@@ -46,7 +46,7 @@ export default function Navigation() {
         {/*Hamburger button*/}
         <Button content={<TfiMenu color='#2b2a33' style={{ fontSize: '1.8rem' }} />} clickFunc={openMenu} classes='text-white p-1 rounded-md' />
 
-        {/*Hamburger Menu*/}
+        {/*Hamburger menu*/}
         <div>
           {/*Dark background*/}
           <div
@@ -58,8 +58,8 @@ export default function Navigation() {
 
           {/*Link container*/}
           <div
-            className={`fixed top-0 gap-y-4 py-4 flex flex-col overflow-x-hidden left-0 z-20 w-[70vw] h-screen bg-white linear transition-all duration-500 ${
-              open ? 'max-w-3xl' : 'max-w-0'
+            className={`fixed border-r-[0.2em] border-gray-200 top-0 gap-y-4 py-4 flex flex-col overflow-x-hidden z-20 w-[70vw] h-screen bg-white ease-in-out transition-all duration-500 ${
+              open ? 'left-0' : '-left-full'
             }`}
           >
             {links.map((link, i) => {
