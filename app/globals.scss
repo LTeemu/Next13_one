@@ -20,21 +20,31 @@
 }
 
 .dashBorderAnim {
-  &:after {
+  display: grid;
+  place-content: center;
+  overflow: clip;
+  overflow-clip-margin: 0.3em;
+  border: 0.3em dotted rgba(255, 255, 255, 0.8);
+  backdrop-filter: brightness(0.5);
+  box-shadow: 0px 0px 0px 0.1em rgb(209, 213, 219);
+  &::after {
     content: '';
-    background-color: white;
     position: absolute;
-    border-radius: 1.8rem;
-    inset: 0.2rem;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: inherit;
+    box-shadow: inset 0px 0px 0px 0.1em rgb(209, 213, 219);
   }
   &:before {
     content: '';
     background: repeating-conic-gradient(rgba(0, 0, 0, 0) 0deg 9deg, #de657e 9deg 18deg, rgba(0, 0, 0, 0) 18deg 27deg, #73a9d8 27deg 36deg);
     animation: rotate 30s linear infinite;
-    border-radius: 2rem;
-    height: 200%;
+    animation-direction: inherit;
+    border-radius: inherit;
     position: absolute;
-    width: 200%;
+    aspect-ratio: 1/1;
+    width: 150%;
     display: flex;
     justify-self: center;
     align-self: center;
