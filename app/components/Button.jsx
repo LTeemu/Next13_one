@@ -1,5 +1,4 @@
 'use client'
-
 export function tempClick() {
   console.log('Clicked button')
 }

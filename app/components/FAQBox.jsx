@@ -17,8 +17,8 @@ export default function FAQBox({ question, answer }) {
       </button>
 
       <p
-        className={`backdrop-brightness-[0.97] whitespace-pre-wrap rounded-md px-2 transition-all overflow-hidden duration-200 ${
-          open ? 'py-1 mt-1 border-[0.08em] border-gray-200 max-h-[750px]' : 'max-h-0 py-0'
+        className={`backdrop-brightness-[0.97] border-gray-200 border-x-[0.08em] whitespace-pre-wrap rounded-md px-2 transition-all overflow-hidden duration-200 ${
+          open ? 'py-1 mt-1 max-h-[750px] border-y-[0.08em]' : 'max-h-0'
         }`}
       >
         {answer}

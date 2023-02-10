@@ -7,12 +7,42 @@ export default function Footer() {
     <footer className='px-4 mt-4 mb-2'>
       {/*Buttons*/}
       <div className='flex gap-x-3'>
-        <ButtonLink content={<GrGithub style={{ fontSize: '1.4rem' }} />} href='https://github.com/lteemu' classContainer='text-slate-800 p-1' blank />
-        <ButtonLink content={<GrTwitter style={{ fontSize: '1.4rem' }} />} href='https://twitter.com' classContainer='text-slate-800 p-1' blank />
-        <ButtonLink content={<GrFacebookOption style={{ fontSize: '1.4rem' }} />} href='https://facebook.com' classContainer='text-slate-800 p-1' blank />
-        <ButtonLink content={<GrYoutube style={{ fontSize: '1.4rem' }} />} href='https://youtube.com' classContainer='text-slate-800 p-1' blank />
-        <ButtonLink content={<GrInstagram style={{ fontSize: '1.4rem' }} />} href='https://instagram.com' classContainer='text-slate-800 p-1' blank />
-        <ButtonLink content={<GrLinkedinOption style={{ fontSize: '1.4rem' }} />} href='https://linkedin.com' classContainer='text-slate-800 p-1' blank />
+        <ButtonLink
+          content={<GrGithub style={{ fontSize: '1.4rem' }} />}
+          href='https://github.com/lteemu'
+          classContainer='bg-[#2b3137] text-white p-1'
+          blank
+        />
+        <ButtonLink
+          content={<GrTwitter style={{ fontSize: '1.4rem' }} />}
+          href='https://twitter.com'
+          classContainer='bg-[#54abef] text-white p-1'
+          blank
+        />
+        <ButtonLink
+          content={<GrFacebookOption style={{ fontSize: '1.4rem' }} />}
+          href='https://facebook.com'
+          classContainer='bg-[#3c569e] text-white p-1'
+          blank
+        />
+        <ButtonLink
+          content={<GrYoutube style={{ fontSize: '1.4rem' }} />}
+          href='https://youtube.com'
+          classContainer='bg-[#ce1719] text-white p-1'
+          blank
+        />
+        <ButtonLink
+          content={<GrInstagram style={{ fontSize: '1.4rem' }} />}
+          href='https://instagram.com'
+          classContainer='text-white p-1 instagramBG'
+          blank
+        />
+        <ButtonLink
+          content={<GrLinkedinOption style={{ fontSize: '1.4rem' }} />}
+          href='https://linkedin.com'
+          classContainer='bg-[#0076b4] text-white p-1'
+          blank
+        />
       </div>
 
       {/*Copyright + rocket*/}
