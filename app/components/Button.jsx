@@ -5,7 +5,7 @@ export function tempClick() {
 
 export function Button({ content, clickFunc, classes, disabled }) {
   return (
-    <button disabled={disabled ? disabled : false} onClick={clickFunc} className={`button ${classes}`}>
+    <button disabled={disabled ? disabled : false} onClick={clickFunc} className={`button active:buttonDown ${classes}`}>
       {content}
     </button>
   )

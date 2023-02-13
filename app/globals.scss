@@ -9,7 +9,10 @@
 
 @layer components {
   .button {
-    @apply font-bold tracking-wider border-4 whitespace-nowrap shadow-[4px_4px_0_0_rgba(192,192,192,0.9)] duration-200 active:duration-[20ms] ease-linear transition-all active:shadow-[0px_0px_0_0_rgba(192,192,192,0)] active:translate-x-[4px] active:translate-y-[4px];
+    @apply font-bold tracking-wider border-4 whitespace-nowrap shadow-[4px_4px_0_0_rgba(192,192,192,0.9)] duration-200;
+  }
+  .buttonDown {
+    @apply shadow-[0px_0px_0_0_rgba(192,192,192,0)] translate-x-[4px] translate-y-[4px];
   }
 }
 

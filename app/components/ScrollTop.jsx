@@ -29,7 +29,7 @@ export default function ScrollTop({ classes }) {
       disabled={!scrollVisible}
       content={<IoMdRocket color='#1e293b' style={{ fontSize: '1.6rem' }} />}
       clickFunc={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      classes={`w-min disabled:pointer-event-none duration-300 opacity-1 disabled:opacity-0 transition-opacity ${classes}`}
+      classes={`w-min disabled:invisible ${classes}`}
     />
   )
 }

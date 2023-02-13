@@ -28,14 +28,15 @@ export default function Navigation() {
     <>
       {/*Desktop - Over 768px md:*/}
       <nav className='hidden text-sm md:flex gap-x-4'>
-        {links.map((link) => {
+        {links.map((link, i) => {
           return (
             <ButtonLink
               key={link.name}
               href={link.href}
               clickFunc={closeMenu}
               content={link.name}
-              classContainer={`w-[90%] rounded-md px-2 py-0.5 mx-auto text-[#2b2a33]`}
+              classContainer={`w-[90%] rounded-md px-2 py-0.5 mx-auto text-white ${i % 2 ? 'bg-secondary' : 'bg-primary'}`}
+              toggle
             />
           )
         })}
@@ -70,6 +71,7 @@ export default function Navigation() {
                   clickFunc={closeMenu}
                   content={link.name}
                   classContainer={`w-[90%] py-1 px-2 rounded-md mx-auto text-white ${i % 2 ? 'bg-secondary' : 'bg-primary'}`}
+                  toggle
                 />
               )
             })}
