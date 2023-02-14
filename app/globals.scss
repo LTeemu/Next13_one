@@ -34,9 +34,9 @@
   place-content: center;
   overflow: clip;
   overflow-clip-margin: 0.3em;
-  border: 0.3em dotted rgba(255, 255, 255, 0.8);
+  border: 0.3em dotted rgb(225, 225, 225);
   backdrop-filter: brightness(0.5);
-  box-shadow: 0px 0px 0px 0.1em rgb(209, 213, 219);
+  box-shadow: 0px 0px 0px 0.1em rgb(201, 201, 201);
   &::after {
     content: '';
     position: absolute;
@@ -44,11 +44,11 @@
     width: 100%;
     background-color: white;
     border-radius: inherit;
-    box-shadow: inset 0px 0px 0px 0.1em rgb(209, 213, 219);
+    box-shadow: inset 0px 0px 0px 0.1em rgb(201, 201, 201);
   }
   &:before {
     content: '';
-    background: repeating-conic-gradient(rgba(0, 0, 0, 0) 0deg 9deg, #de657e 9deg 18deg, rgba(0, 0, 0, 0) 18deg 27deg, #73a9d8 27deg 36deg);
+    background: repeating-conic-gradient(rgba(0, 0, 0, 0) 0deg 9deg, #d45770 9deg 18deg, rgba(0, 0, 0, 0) 18deg 27deg, #5892c2 27deg 36deg);
     animation: rotate 30s linear infinite;
     animation-direction: inherit;
     border-radius: inherit;

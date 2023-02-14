@@ -15,8 +15,8 @@ module.exports = {
         '4xl': '2rem',
       },
       colors: {
-        primary: '#de657e',
-        secondary: '#73a9d8'
+        primary: '#D45770',
+        secondary: '#5892C2'
       },
     },
   },

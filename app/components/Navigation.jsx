@@ -45,7 +45,12 @@ export default function Navigation() {
       {/*Mobile - Under 768px md:*/}
       <div className='block md:hidden'>
         {/*Hamburger button*/}
-        <Button content={<TfiMenu color='#2b2a33' style={{ fontSize: '1.8rem' }} />} clickFunc={openMenu} classes='text-white p-1 rounded-md' />
+        <Button
+          title='Menu'
+          content={<TfiMenu color='#2b2a33' style={{ fontSize: '1.8rem' }} />}
+          clickFunc={openMenu}
+          classes='text-white p-1 rounded-md'
+        />
 
         {/*Hamburger menu*/}
         <div>

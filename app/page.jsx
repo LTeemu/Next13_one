@@ -39,7 +39,7 @@ export default function Home() {
               Practice
             </p>
             {/*Circle img*/}
-            <div className='w-[80%] my-auto -translate-x-[40%] h-[80%] rounded-full dashBorderAnim'>
+            <div className='w-[80%] relative my-auto -translate-x-[40%] h-[80%] rounded-full dashBorderAnim'>
               <Image
                 src={'/llama.webp'}
                 sizes='50vw'

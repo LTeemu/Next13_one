@@ -27,6 +27,7 @@ export default function ScrollTop({ classes }) {
   return (
     <Button
       disabled={!scrollVisible}
+      title='Scroll top'
       content={<IoMdRocket color='#1e293b' style={{ fontSize: '1.6rem' }} />}
       clickFunc={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       classes={`w-min disabled:invisible ${classes}`}
