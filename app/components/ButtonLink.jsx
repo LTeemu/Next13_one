@@ -10,6 +10,7 @@ export default function ButtonLink({ content, href, clickFunc, classContainer, c
       href={href}
       onClick={clickFunc && clickFunc}
       target={blank ? '_blank' : '_self'}
+      tabIndex={path === href ? -1 : 0}
       className={`button ${!toggle && 'active:buttonDown'} ${path === href && 'pointer-events-none buttonDown saturate-50'} ${classContainer}`}
     >
       <span className={classContent}>{content}</span>

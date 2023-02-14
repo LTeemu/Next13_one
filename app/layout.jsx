@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
       <head />
       <body className={`${assistant.variable} ${tourney.variable} overflow-x-hidden font-assistant bg-white text-black flex flex-col min-h-screen`}>
         <Header />
-        <main className='flex flex-col flex-1 overflow-x-hidden' tabIndex={-1}>
+        <main className='flex flex-col flex-1'>
           <div>{children}</div>
         </main>
         <Footer />
