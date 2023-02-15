@@ -9,19 +9,8 @@ export default function ScrollTop({ classes }) {
   const [scrollVisible, setScrollVisible] = useState(false)
   const pathName = usePathname()
 
-  const trackWindowHeight = () => {
-    setScrollVisible(document.body.scrollHeight > window.innerHeight * 1.1)
-  }
-
   useEffect(() => {
-    window.addEventListener('scroll', _.throttle(trackWindowHeight, 500))
-    return () => {
-      window.removeEventListener('scroll', _.throttle(trackWindowHeight, 500))
-    }
-  }, [])
-
-  useEffect(() => {
-    trackWindowHeight()
+    setScrollVisible(document.body.scrollHeight > window.innerHeight)
   }, [pathName])
 
   return (
