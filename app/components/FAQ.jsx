@@ -45,13 +45,27 @@ const QA = [
 ]
 
 export default function FAQ() {
-  const [open, setOpen] = useState()
+  const [open, setOpen] = useState({ index: null, duration: null })
+
+  const openBox = (dropdownHeight, i) => {
+    let calcDur = (dropdownHeight * 2).toFixed(0) + 'ms'
+    setOpen({ index: open.index === i ? null : i, duration: calcDur })
+  }
 
   return (
     <div className='grid flex-col px-4 place-content-center gap-y-2'>
       <p className='font-semibold tracking-wider'>Frequently Asked Questions</p>
       {QA.map((item, i) => {
-        return <FAQBox key={i} question={item.question} answer={item.answer} open={open === i} clickFunc={() => setOpen(open === i ? '' : i)} />
+        return (
+          <FAQBox
+            key={i}
+            question={item.question}
+            answer={item.answer}
+            open={i === open.index}
+            duration={open.duration}
+            clickFunc={(e) => openBox(e.currentTarget.nextSibling.scrollHeight, i)}
+          />
+        )
       })}
     </div>
   )

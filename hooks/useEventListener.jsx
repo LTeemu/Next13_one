@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 
-export default function useEventListener(eventType, handler) {
+export default function useEventListener(eventType, eventFunc) {
   useEffect(() => {
-    window.addEventListener(eventType, handler)
+    window.addEventListener(eventType, eventFunc)
     return () => {
-      window.removeEventListener(eventType, handler)
+      window.removeEventListener(eventType, eventFunc)
     }
-  }, [eventType, handler])
+  }, [])
 }

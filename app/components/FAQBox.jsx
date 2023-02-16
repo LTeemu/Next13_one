@@ -3,17 +3,17 @@ import { useRef, useEffect, useState } from 'react'
 import useEventListener from '@/hooks/useEventListener'
 var _ = require('lodash')
 
-export default function FAQBox({ question, answer, open, clickFunc, maxHeight }) {
+export default function FAQBox({ question, answer, open, clickFunc, duration }) {
   const [calcMaxH, setCalcMaxH] = useState(0)
-  const ref = useRef()
+  const dropdown = useRef()
 
   useEffect(() => {
-    setCalcMaxH(`calc(${ref.current.scrollHeight}px + 0.75rem)`) //0.75rem = py-1 + mt-1
+    setCalcMaxH(`calc(${dropdown.current.scrollHeight}px + 0.75rem)`) //0.75rem = py-1 + mt-1
   }, [])
 
   useEventListener(
     'resize',
-    _.debounce(() => setCalcMaxH(`calc(${ref.current.scrollHeight}px + 0.75rem)`), 1000)
+    _.debounce(() => setCalcMaxH(`calc(${dropdown.current.scrollHeight}px + 0.75rem)`), 800)
   )
 
   return (
@@ -28,9 +28,14 @@ export default function FAQBox({ question, answer, open, clickFunc, maxHeight })
       </button>
 
       <p
-        ref={ref}
-        style={{ maxHeight: open ? calcMaxH : 0, transition: `linear ${(ref?.current?.scrollHeight * 2).toFixed(0)}ms` }}
-        className={`backdrop-brightness-[0.97] border-gray-200 border-x-[0.08em] whitespace-pre-wrap rounded-md px-2 ease-out overflow-hidden ${
+        ref={dropdown}
+        style={{
+          maxHeight: open ? calcMaxH : 0,
+          transitionProperty: 'max-height, padding, margin',
+          transitionTimingFunction: 'linear',
+          transitionDuration: duration,
+        }}
+        className={`backdrop-brightness-[0.97] border-gray-200 border-x-[0.08em] whitespace-pre-wrap rounded-md px-2 overflow-hidden ${
           open && `py-1 mt-1 border-y-[0.08em]`
         }`}
       >
