@@ -43,7 +43,7 @@ export default function Navigation() {
       </nav>
 
       {/*Mobile - Under 768px md:*/}
-      <div className='block md:hidden'>
+      <nav className='block md:hidden'>
         {/*Hamburger button*/}
         <Button
           title='Menu'
@@ -82,7 +82,7 @@ export default function Navigation() {
             })}
           </div>
         </div>
-      </div>
+      </nav>
     </>
   )
 }

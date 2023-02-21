@@ -1,6 +1,7 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import FAQBox from './FAQBox'
+var _ = require('lodash')
 
 const QA = [
   {
@@ -45,12 +46,26 @@ const QA = [
 ]
 
 export default function FAQ() {
-  const [open, setOpen] = useState({ index: null, duration: null })
+  const [openIndex, setOpenIndex] = useState()
+  const [maxHeight, setMaxHeight] = useState()
+  const openDropdown = useRef()
 
-  const openBox = (dropdownHeight, i) => {
-    let calcDur = (dropdownHeight * 2).toFixed(0) + 'ms'
-    setOpen({ index: open.index === i ? null : i, duration: calcDur })
+  const resizeBox = () => {
+    openDropdown.current && setMaxHeight(openDropdown.current.scrollHeight)
   }
+
+  const openBox = (dropdown, i) => {
+    openDropdown.current = dropdown
+    setMaxHeight(dropdown.scrollHeight)
+    setOpenIndex(openIndex === i ? null : i)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', _.debounce(resizeBox, 800))
+    return () => {
+      window.removeEventListener('resize', _.debounce(resizeBox, 800))
+    }
+  }, [])
 
   return (
     <div className='grid flex-col px-4 place-content-center gap-y-2'>
@@ -61,9 +76,9 @@ export default function FAQ() {
             key={i}
             question={item.question}
             answer={item.answer}
-            open={i === open.index}
-            duration={open.duration}
-            clickFunc={(e) => openBox(e.currentTarget.nextSibling.scrollHeight, i)}
+            open={i === openIndex}
+            maxHeight={maxHeight}
+            clickFunc={(e) => openBox(e.currentTarget.nextSibling, i)}
           />
         )
       })}

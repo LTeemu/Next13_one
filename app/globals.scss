@@ -33,7 +33,7 @@
   display: grid;
   place-content: center;
   overflow: clip;
-  overflow-clip-margin: 0.3em;
+  overflow-clip-margin: 0.3em; //Doesn't work with safari
   border: 0.3em dotted rgb(225, 225, 225);
   backdrop-filter: brightness(0.5);
   box-shadow: 0px 0px 0px 0.1em rgb(201, 201, 201);
