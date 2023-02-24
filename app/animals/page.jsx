@@ -67,6 +67,7 @@ export default function Animals() {
             ref={imgRef}
             src={images[active] ? images[active].src : defaultImg.src}
             alt=''
+            sizes='66vw'
             fill
             priority
             placeholder='blur'
