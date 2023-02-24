@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { Button, tempClick } from './components/Button'
 import FAQ from './components/FAQ'
+import llamaImg from '/public/images/llama.webp'
+import bootImg from '/public/images/boot.webp'
 
 export default function Home() {
   return (
@@ -41,9 +43,10 @@ export default function Home() {
             {/*Circle img*/}
             <div className='w-[80%] relative my-auto -translate-x-[40%] h-[80%] rounded-full dashBorderAnim'>
               <Image
-                src={'/llama.webp'}
+                src={llamaImg}
                 sizes='50vw'
-                alt={''}
+                alt='llama'
+                placeholder='blur'
                 priority
                 fill
                 className='object-cover border-[0.1em] border-gray-300 z-10 object-[25%] rounded-full'
@@ -61,9 +64,10 @@ export default function Home() {
             {/*Circle img*/}
             <div className='w-[80%] relative my-auto translate-x-[80%] h-[80%] dashBorderAnim rounded-full' style={{ animationDirection: 'reverse' }}>
               <Image
-                src={'/boot.webp'}
+                src={bootImg}
                 sizes='25vw'
-                alt={''}
+                alt='boot'
+                placeholder='blur'
                 priority
                 fill
                 className='object-cover border-[0.1em] border-gray-300 object-[60%_50%] rounded-full z-10'

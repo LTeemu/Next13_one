@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-export default function ButtonLink({ content, href, clickFunc, classContainer, classContent, blank, toggle, title }) {
+export default function ButtonLink({ content, href, clickFunc, classContainer, classContent, blank, toggle, title, tabIndex }) {
   const path = usePathname()
 
   return (
@@ -11,8 +11,10 @@ export default function ButtonLink({ content, href, clickFunc, classContainer, c
       title={title}
       onClick={clickFunc && clickFunc}
       target={blank ? '_blank' : '_self'}
-      tabIndex={path === href ? -1 : 0}
-      className={`button ${!toggle && 'active:buttonDown'} ${path === href && 'pointer-events-none buttonDown saturate-50'} ${classContainer}`}
+      tabIndex={tabIndex ? tabIndex : path === href ? -1 : 0}
+      className={`button ${!toggle ? 'active:buttonDown' : ''} ${
+        path === href ? 'pointer-events-none buttonDown saturate-50' : ''
+      } ${classContainer}`}
     >
       <span className={classContent}>{content}</span>
     </Link>

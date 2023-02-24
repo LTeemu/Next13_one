@@ -1,6 +1,6 @@
 'use client'
 import { TfiMenu } from 'react-icons/tfi'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ButtonLink from './ButtonLink'
 import { Button } from './Button'
 
@@ -8,10 +8,10 @@ export default function Navigation() {
   const [open, setOpen] = useState(false)
   const links = [
     { name: 'Home', href: '/' },
-    { name: 'Features', href: '/features' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Animals', href: '/animals' },
+    { name: 'Empty1', href: '/empty1' },
+    { name: 'Empty2', href: '/empty2' },
+    { name: 'Empty3', href: '/empty3' },
   ]
 
   function openMenu() {
@@ -23,6 +23,18 @@ export default function Navigation() {
     setOpen(false)
     document.body.classList.remove('overflow-y-hidden')
   }
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape' && open) {
+        setOpen(false)
+      }
+    }
+    open && window.addEventListener('keydown', handleEsc)
+    return () => {
+      window.removeEventListener('keydown', handleEsc)
+    }
+  }, [open])
 
   return (
     <>
@@ -71,6 +83,7 @@ export default function Navigation() {
             {links.map((link, i) => {
               return (
                 <ButtonLink
+                  tabIndex={open ? 0 : -1}
                   key={link.name}
                   href={link.href}
                   clickFunc={closeMenu}
