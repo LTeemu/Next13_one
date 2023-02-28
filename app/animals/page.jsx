@@ -20,33 +20,13 @@ export default function Animals2() {
   ]
 
   useEffect(() => {
-    gsap.fromTo(`img[data-animal="${activeIndex}"]`, { scale: 1.1 }, { scale: 1, duration: 2, ease: Expo.easeOut })
+    gsap.fromTo(`img[data-animal="${activeIndex}"]`, { scale: 1.1, rotateX: 0.02 }, { scale: 1, rotateX: 0, duration: 2, ease: Expo.easeOut }) //rotate prevents shake
   }, [activeIndex])
 
   return (
     <>
-      <div className='relative grid max-w-5xl grid-cols-3 mx-auto'>
-        <div className='flex flex-col col-span-1'>
-          {images.slice(1).map((item, i) => {
-            return (
-              <span
-                key={i}
-                tabIndex={0}
-                className='flex items-center h-full px-4 border border-slate-50'
-                onTouchStartCapture={() => setActiveIndex(i + 1)}
-                onTouchCancelCapture={() => setActiveIndex(0)}
-                onFocusCapture={() => setActiveIndex(i + 1)}
-                onBlurCapture={() => setActiveIndex(0)}
-                onMouseEnter={() => setActiveIndex(i + 1)}
-                onMouseLeave={() => setActiveIndex(0)}
-              >
-                {item.text}
-              </span>
-            )
-          })}
-        </div>
-
-        <div className='relative col-span-2 max-h-[80vmin] aspect-square'>
+      <div className='grid max-w-5xl grid-cols-1 mx-auto sm:grid-cols-3'>
+        <div className='relative col-span-1 sm:col-span-2 h-[70vmin] sm:order-2 max-w-full aspect-square mx-auto'>
           {images.map((img, i) => {
             return (
               <div
@@ -63,13 +43,33 @@ export default function Animals2() {
                   data-animal={i}
                   src={img.src}
                   alt=''
-                  sizes='66vw'
+                  sizes='(max-width: 640px) 100vw, 66vw'
                   fill
                   priority
                   placeholder='blur'
                   className={`object-cover ${activeIndex === i ? 'visible' : 'invisible'}`}
                 />
               </div>
+            )
+          })}
+        </div>
+
+        <div id='imgOptions' className='grid col-span-1'>
+          {images.slice(1).map((item, i) => {
+            return (
+              <span
+                key={i}
+                tabIndex={0}
+                className='flex items-center h-full px-4 py-2 border-t last:border-b sm:order-1 from-slate-100 to-white'
+                onTouchStartCapture={() => setActiveIndex(i + 1)}
+                onTouchCancelCapture={() => setActiveIndex(0)}
+                onFocusCapture={() => setActiveIndex(i + 1)}
+                onBlurCapture={(e) => e.relatedTarget?.parentNode?.id !== 'imgOptions' && setActiveIndex(0)}
+                onMouseEnter={() => setActiveIndex(i + 1)}
+                onMouseLeave={() => setActiveIndex(0)}
+              >
+                {item.text}
+              </span>
             )
           })}
         </div>

@@ -1,7 +1,7 @@
 'use client'
 import { Button } from './Button'
 import { IoMdRocket } from 'react-icons/io'
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import { usePathname } from 'next/navigation'
 var _ = require('lodash')
 
@@ -9,8 +9,8 @@ export default function ScrollTop({ classes }) {
   const [scrollVisible, setScrollVisible] = useState(false)
   const pathName = usePathname()
 
-  useEffect(() => {
-    setScrollVisible(document.body.scrollHeight > window.innerHeight)
+  useLayoutEffect(() => {
+    setScrollVisible(document.body.scrollHeight > window.innerHeight * 1.2) //if over 120vh
   }, [pathName])
 
   return (
