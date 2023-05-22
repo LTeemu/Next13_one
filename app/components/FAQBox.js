@@ -17,11 +17,10 @@ export default function FAQBox({ question, answer, open, clickFunc, maxHeight })
           maxHeight: open ? `calc(${maxHeight}px + 0.75rem)` : 0,
           transitionProperty: 'max-height, padding, margin',
           transitionTimingFunction: 'linear',
-          transitionDuration: (maxHeight * 2).toFixed(0) + 'ms',
+          transitionDuration: (Math.round((maxHeight * 2) / 4) * 4).toFixed(0) + 'ms',
         }}
-        className={`backdrop-brightness-[0.97] border-gray-200 border-x-[0.08em] whitespace-pre-wrap rounded-md px-2 overflow-hidden ${
-          open && `py-1 mt-1 border-y-[0.08em]`
-        }`}
+        className={`backdrop-brightness-[0.97] border-gray-200 border-x-[0.08em] whitespace-pre-wrap rounded-md px-2 overflow-hidden ${open && `py-1 mt-1 border-y-[0.08em]`
+          }`}
       >
         {answer}
       </p>

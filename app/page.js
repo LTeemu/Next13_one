@@ -21,7 +21,7 @@ export default function Home() {
 
           <div className='flex mt-10 md:flex-col md:gap-y-4 gap-x-4'>
             <Button content='GET STARTED' clickFunc={tempClick} classes='bg-primary text-white px-3 py-2 rounded-md' />
-            <Button content='SECONDARY' clickFunc={tempClick} classes='border-secondary text-secondary px-3 py-2 rounded-md' />
+            <Button content='SECONDARY' clickFunc={tempClick} classes='border-secondary text-secondary px-4 py-2 rounded-md' />
           </div>
         </div>
 

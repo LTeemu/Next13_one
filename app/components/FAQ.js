@@ -50,9 +50,9 @@ export default function FAQ() {
   const [maxHeight, setMaxHeight] = useState()
   const openDropdown = useRef()
 
-  const resizeBox = () => {
+  const resizeBox = _.debounce(() => {
     openDropdown.current && setMaxHeight(openDropdown.current.scrollHeight)
-  }
+  }, 1000)
 
   const openBox = (dropdown, i) => {
     openDropdown.current = dropdown
@@ -61,9 +61,19 @@ export default function FAQ() {
   }
 
   useEffect(() => {
-    window.addEventListener('resize', _.debounce(resizeBox, 800))
+    //Resize maxheight on edge translate
+    const title = document.querySelector('title')
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type == 'attributes' && mutation.attributeName == '_msttexthash') {
+          resizeBox()
+        }
+      })
+    })
+    observer.observe(title, { attributes: true })
+    window.addEventListener('resize', resizeBox)
     return () => {
-      window.removeEventListener('resize', _.debounce(resizeBox, 800))
+      window.removeEventListener('resize', resizeBox)
     }
   }, [])
 

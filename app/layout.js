@@ -10,10 +10,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head />
-      <body className={`${assistant.variable} ${tourney.variable} overflow-x-hidden font-assistant bg-white text-black flex flex-col min-h-screen`}>
+      <body className={`${assistant.variable} ${tourney.variable} flex min-h-full flex-col overflow-x-hidden font-assistant bg-white text-black`}>
         <Header />
-        <main className='flex flex-col flex-1'>
-          <div>{children}</div>
+        <main className='flex-1'>
+          {children}
         </main>
         <Footer />
       </body>

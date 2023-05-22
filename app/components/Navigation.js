@@ -69,16 +69,14 @@ export default function Navigation() {
           {/*Dark background*/}
           <div
             onClick={closeMenu}
-            className={`fixed top-0 left-0 cursor-pointer z-10 w-screen h-screen bg-[rgba(0,0,0,0.75)] transition-opacity duration-500 ease-in-out ${
-              open ? 'opacity-1' : 'opacity-0 pointer-events-none'
-            }`}
+            className={`fixed top-0 left-0 cursor-pointer z-10 w-screen h-screen bg-[rgba(0,0,0,0.75)] transition-opacity duration-500 ease-in-out ${open ? 'opacity-1' : 'opacity-0 pointer-events-none'
+              }`}
           ></div>
 
           {/*Link container*/}
           <div
-            className={`fixed outline-4 outline-slate-200 outline top-0 gap-y-4 py-4 flex flex-col overflow-x-hidden z-20 w-[70vw] max-w-[300px] h-screen bg-white rounded-tl-2xl rounded-bl-2xl ease-in-out transition-[right] duration-500 ${
-              open ? 'right-0' : '-right-full'
-            }`}
+            className={`fixed border-4 border-slate-200 top-0 gap-y-4 py-4 flex flex-col overflow-x-hidden z-20 w-[70vw] max-w-[300px] h-full bg-white rounded-tl-2xl rounded-bl-2xl ease-in-out transition-[right] duration-500 ${open ? 'right-0' : '-right-full'
+              }`}
           >
             {links.map((link, i) => {
               return (
