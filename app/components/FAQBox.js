@@ -1,18 +1,21 @@
 import { FaChevronDown } from 'react-icons/fa'
 import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap';
-import { CustomEase } from "gsap/CustomEase";
-gsap.registerPlugin(CustomEase);
+import { gsap } from 'gsap'
+import { CustomEase } from "gsap/CustomEase"
+gsap.registerPlugin(CustomEase)
 
 export default function FAQBox({ question, answer, open, clickFunc }) {
   const dropdown = useRef();
   const dropdown_height = dropdown.current?.scrollHeight
-  const cEase = CustomEase.create("custom", "M0,0,C0.14,0,0.258,0.402,0.31,0.561,0.345,0.668,0.41,0.963,0.418,1,0.424,0.988,0.5,0.85,0.61,0.812,0.743,0.765,0.862,0.874,0.862,0.874,0.862,0.874,0.986,0.987,1,1");
+
+  useEffect(() => {
+    CustomEase.create("custom", "M0,0,C0.14,0,0.346,0.08,0.5,0.5,0.559,0.661,0.64,0.963,0.648,1,0.656,0.985,0.656,0.992,0.7,0.932,0.802,0.792,0.918,0.916,0.918,0.916,0.918,0.916,0.993,0.983,1,1");
+  }, []);
 
   useEffect(() => {
     open
-      ? gsap.to(dropdown.current, { height: `calc(${dropdown_height}px + 0.5rem)`, marginTop: '0.25rem', paddingTop: '0.25rem', paddingBottom: '0.25rem', ease: cEase, duration: 0.8, onComplete: () => gsap.set(dropdown.current, { height: 'auto' }) })
-      : gsap.to(dropdown.current, { height: 0, paddingTop: 0, marginTop: 0, paddingBottom: 0, ease: cEase, duration: 0.8 })
+      ? gsap.to(dropdown.current, { height: `calc(${dropdown_height}px + 0.5rem)`, marginTop: '0.25rem', paddingTop: '0.25rem', paddingBottom: '0.25rem', ease: 'custom', duration: 0.88, onComplete: () => gsap.set(dropdown.current, { height: 'auto' }) })
+      : gsap.to(dropdown.current, { height: 0, paddingTop: 0, marginTop: 0, paddingBottom: 0, ease: 'custom', duration: 0.88 })
   }, [open]);
 
   return (

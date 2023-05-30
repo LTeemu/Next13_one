@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import FAQBox from './FAQBox'
 var _ = require('lodash')
 
