@@ -47,35 +47,6 @@ const QA = [
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState()
-  const [maxHeight, setMaxHeight] = useState()
-  const openDropdown = useRef()
-
-  const resizeBox = _.debounce(() => {
-    openDropdown.current && setMaxHeight(openDropdown.current.scrollHeight)
-  }, 1000)
-
-  const openBox = (dropdown, i) => {
-    openDropdown.current = dropdown
-    setMaxHeight(dropdown.scrollHeight)
-    setOpenIndex(openIndex === i ? null : i)
-  }
-
-  useEffect(() => {
-    //Resize maxheight on edge translate
-    const title = document.querySelector('title')
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type == 'attributes' && mutation.attributeName == '_msttexthash') {
-          resizeBox()
-        }
-      })
-    })
-    observer.observe(title, { attributes: true })
-    window.addEventListener('resize', resizeBox)
-    return () => {
-      window.removeEventListener('resize', resizeBox)
-    }
-  }, [])
 
   return (
     <div className='grid flex-col px-4 place-content-center gap-y-2'>
@@ -87,8 +58,7 @@ export default function FAQ() {
             question={item.question}
             answer={item.answer}
             open={i === openIndex}
-            maxHeight={maxHeight}
-            clickFunc={(e) => openBox(e.currentTarget.nextSibling, i)}
+            clickFunc={() => setOpenIndex(openIndex === i ? null : i)}
           />
         )
       })}
