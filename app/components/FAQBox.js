@@ -22,8 +22,9 @@ export default function FAQBox({ question, answer, open, clickFunc }) {
           marginTop: '0.25rem',
           paddingTop: '0.25rem',
           paddingBottom: '0.25rem',
+          outlineColor: 'rgba(229,231,235,1)', //gray-200
           ease: 'custom',
-          duration: 0.88,
+          duration: 0.8,
           onComplete: () => gsap.set(dropdown.current, { height: 'auto' }),
         })
       : gsap.to(dropdown.current, {
@@ -31,8 +32,9 @@ export default function FAQBox({ question, answer, open, clickFunc }) {
           marginTop: 0,
           paddingTop: 0,
           paddingBottom: 0,
+          outlineColor: 'rgba(229,231,235,0)',
           ease: 'custom',
-          duration: 0.88,
+          duration: 0.8,
         })
   }, [open])
 
@@ -49,7 +51,7 @@ export default function FAQBox({ question, answer, open, clickFunc }) {
 
       <p
         ref={dropdown}
-        className='backdrop-brightness-[0.97] outline -outline-offset-[0.08em] outline-[0.08em] outline-gray-200 h-0 whitespace-pre-wrap rounded-md px-2 overflow-hidden'
+        className='backdrop-brightness-[0.97] outline -outline-offset-[0.08em] outline-[0.08em] outline-[rgba(229,231,235,0)] h-0 whitespace-pre-wrap rounded-md px-2 overflow-hidden'
       >
         {answer}
       </p>

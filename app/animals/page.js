@@ -42,7 +42,7 @@ export default function Animals2() {
                 data-animal={i}
                 src={img.src}
                 alt=''
-                sizes='(max-width: 640px) 100vw, 66vw'
+                sizes='(min-width: 640px) 66vw, 100vw'
                 fill
                 priority
                 placeholder='blur'
