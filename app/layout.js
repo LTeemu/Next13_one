@@ -3,8 +3,8 @@ import { Assistant, Tourney } from '@next/font/google'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-const assistant = Assistant({ subsets: ['latin'], weight: 'variable', variable: '--font-assistant' })
-const tourney = Tourney({ subsets: ['latin'], weight: ['400'], variable: '--font-tourney' })
+const assistant = Assistant({ subsets: ['latin'], weight: 'variable', variable: '--font-assistant', display: 'swap' })
+const tourney = Tourney({ subsets: ['latin'], weight: ['400'], variable: '--font-tourney', display: 'swap' })
 
 export default function RootLayout({ children }) {
   return (
